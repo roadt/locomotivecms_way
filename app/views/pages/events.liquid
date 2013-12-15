@@ -1,0 +1,5 @@
+  <ul>
+  {% for event in contents.events %}
+    <li><a href="/events/{{ event._slug }}">{{event.title}}</a></li>
+  {% endfor %}
+  </ul>
