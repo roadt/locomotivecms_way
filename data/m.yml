@@ -1,0 +1,28 @@
+- "Sample 1":
+    text: "Sapiente voluptatem accusamus labore ut non adipisci. Repellat nostrum sit qui aut ut adipisci in. Qui sequi repudiandae nisi. Nihil molestiae atque omnis praesentium distinctio rerum dolores. Sequi totam et molestias numquam."
+    select: null # Use the value of a select option defined in the app/content_types/m.rb file.
+    file: null # Path to a file in the public/samples folder or to a remote and external file.
+    date: 2013/12/15 # YYYY/MM/DD
+    boolean: true # Or false
+
+- "Sample 2":
+    text: "Autem molestias quod tempora sunt. Ab exercitationem eius alias est. Aut itaque facere ratione. Maxime distinctio voluptatum ea quibusdam aut. Qui officia dolor corporis voluptatum veniam ratione."
+    select: null # Use the value of a select option defined in the app/content_types/m.rb file.
+    file: null # Path to a file in the public/samples folder or to a remote and external file.
+    date: 2013/12/15 # YYYY/MM/DD
+    boolean: true # Or false
+
+- "Sample 3":
+    text: "Ut sit omnis quos ducimus qui consequatur eum earum. Porro architecto voluptatem sit est eos. Id corporis et sed. Dignissimos deserunt et suscipit a. Similique quo et quia et eos dolorem."
+    select: null # Use the value of a select option defined in the app/content_types/m.rb file.
+    file: null # Path to a file in the public/samples folder or to a remote and external file.
+    date: 2013/12/15 # YYYY/MM/DD
+    boolean: true # Or false
+
+- "Sample 4":
+    text: "Pariatur vel quia at aspernatur. Tenetur ex dolor quo non. Ut quisquam vel at repellendus voluptatum quis. At corporis qui non."
+    select: null # Use the value of a select option defined in the app/content_types/m.rb file.
+    file: null # Path to a file in the public/samples folder or to a remote and external file.
+    date: 2013/12/15 # YYYY/MM/DD
+    boolean: true # Or false
+

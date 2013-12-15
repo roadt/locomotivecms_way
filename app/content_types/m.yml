@@ -1,0 +1,103 @@
+# Public name of this content type
+name: M
+
+# TODO: explain
+slug: m
+
+# Explanation for the backoffice
+description: A description of the content type for the editors
+
+# Default field (e.g title)
+label_field_name: string
+
+# Order of entries
+order_by: manually # default: manually, also available: created_at or any field slug
+
+# Order direction
+# order_direction: asc # default: asc, also available: desc
+
+# Display entries grouped by <field> in the backoffice
+# group_by: <your field>
+
+# Activate public 'create' API (e.g for a contact form)
+# public_submission_enabled: false
+
+# Emails to be notified on new entries using the public API
+# public_submission_accounts: ['john@acme.net']
+
+# Describe each field. The name shoud always be an underscored string
+fields: 
+- string: # Name of the field
+    label: String
+    type: string
+    required: true
+    hint: A description of the field for the editors
+    localized: false
+
+- text: # Name of the field
+    label: Text
+    type: text
+    required: false
+    hint: A description of the field for the editors
+    localized: false
+    # Enable or not the RTE [html|text]
+    # text_formatting: html
+
+- select: # Name of the field
+    label: Select
+    type: select
+    required: false
+    hint: A description of the field for the editors
+    localized: false    # if localized, use
+    #   en: ['option1_en', 'option2_en']
+    #   fr: ['option1_fr', 'option2_fr']
+    select_options: ['option 1', 'option 2', 'option 3']
+
+- file: # Name of the field
+    label: File
+    type: file
+    required: false
+    hint: A description of the field for the editors
+    localized: false
+
+- integer: # Name of the field
+    label: Integer
+    type: integer
+    required: false
+    hint: A description of the field for the editors
+    localized: false
+
+- float: # Name of the field
+    label: Float
+    type: float
+    required: false
+    hint: A description of the field for the editors
+    localized: false
+
+- date: # Name of the field
+    label: Date
+    type: date
+    required: false
+    hint: A description of the field for the editors
+    localized: false
+
+- date_time: # Name of the field
+    label: Date time
+    type: date_time
+    required: false
+    hint: A description of the field for the editors
+    localized: false
+
+- boolean: # Name of the field
+    label: Boolean
+    type: boolean
+    required: false
+    hint: A description of the field for the editors
+    localized: false
+
+- tags: # Name of the field
+    label: Tags
+    type: tags
+    required: false
+    hint: A description of the field for the editors
+    localized: false
