@@ -33,3 +33,10 @@ fields:
     required: true
     hint: A description of the field for the editors
     localized: false
+
+- books:
+    label: Books
+    type: has_many
+    target: books
+    inverse_of: author
+    ui_enabled: true
