@@ -23,13 +23,23 @@ published: true
 {% extends parent %}
 
 {% block main %}
-        <div class="img-box">
-          <a href="{{ 'Hyangwonjeong_photo_d_ramey_logan.jpg' | theme_image_url | resize: '800x' }}">
-            <img src="{{ 'Hyangwonjeong_photo_d_ramey_logan.jpg' | theme_image_url | resize: '400x' }}" alt="Hyangwonjeong" /> 
-          </a>
-          <p>Gyeongbokgung, Seoul</p>
-        </div>
 
+        {% block featured_photo %}
+        {% capture caption %}
+        {% editable_text "caption", format: "raw", rows: 3, hint: "Text displayed below the photo and in the ALT attriubte." %}
+        Gyeongbokgung, Seoul
+        {% endeditable_text %}
+        {% endcapture %}
+
+        {% capture photo %}{% editable_file "photo" %}/samples/pages/Hyangwonjeong_photo_d_ramey_logan.jpg{% endeditable_file %}{% endcapture %}
+        <div class="img-box">
+          <a href="{{  photo | resize: '800x' }}">
+            <img src="{{ photo | resize: '400x' }}" alt="{{ caption }}o
+" /> 
+          </a>
+          <p>{{ caption }}</p>
+        </div>
+        {% endblock %}
         {% editable_text "about_body", rows: 20 %}
         <p>
         Thanks for visiting Wisdom for Wanderers!
