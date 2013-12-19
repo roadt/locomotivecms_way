@@ -1,0 +1,33 @@
+/* a nice frame for images */
+div.img-box {
+  border-width: 5px;
+  border-style: solid;
+}
+
+div.img-box img {
+  max-width: 100%;
+}
+
+div.img-box p {
+  margin: 5px;
+  text-align: center;
+}
+
+/* phones */
+@media (max-width: 767px) {
+  body.about .img-box {
+    width:300px;
+    margin: 0px auto 10px auto;
+  }
+
+  h1, h2 { text-align:center; }
+}
+
+/* tablets and up */
+@media (min-width: 768px) {
+  body.about .img-box {
+    width:400px;
+    margin-left: 20px;
+    float: right;
+  }
+}
