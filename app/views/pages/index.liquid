@@ -1,4 +1,76 @@
-<hr>
-{% block main %}
-{% endblock %} 
-<hr>
+---
+title: Home
+published: true
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="tex/html;charset=UTF-8">
+    <meta charset="utf-8">
+    <title>
+      {{ page.title }} - {{ site.name }}
+      | {% if page.seo_title %} {{ page.seo_title }} {% else %}{{ site.seo_title }} {% endif %}
+    </title>
+    <meta name="description" content="{% if page.meta_description %}{{page.meta_description}}{% else %}{{site.meta_description}}{% endif %}">
+    <meta name="keywords" content="{{ site.meta_keywords }} {{ page.meta_keywords }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {{ "bootstrap.css" | stylesheet_tag }}
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <!-- site titile -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+          <h1>Wisdom for Wanderers</h1>
+        </div>
+      </div>
+
+      <!-- site navgiation -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+          <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li {% if page.slug=="index" %}class="active"{% endif %}>
+                  <a href="/">Home</a>
+                </li>
+                {% nav 'site', no_wrapper: true, active_class: "active" %}
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!--page content -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-1">
+          <h2>{{ page.title }}</h2>
+          {% block main %}
+          Coming Soon.
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <!--javascript-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    {{ 'bootstrap.min.js' | javascript_tag }}
+  </body>
+</html>
+             
+           
+
+
